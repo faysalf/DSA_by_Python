@@ -34,6 +34,6 @@ def merge_sort(L):
     return L
 
 if __name__ == "__main__":
-    L = [5, 4, 5, 2, 2, 5, 4, 2, 5]
+    L = list(map(int,input("Enter list elements: ").split()))
     result = merge_sort(L)
     print(result)

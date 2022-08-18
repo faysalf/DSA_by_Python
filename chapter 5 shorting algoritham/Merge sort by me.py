@@ -12,12 +12,13 @@ def merge_sort(L):
         merge_sort(right_list)
         #duiti list er elementguluke compare kore L list a insert korbo. ate kono impect porbena.
         #cause agee left & right list a devide kore alada kore rekhechhi.
-        i=j=k=0
+
+        i = j = k = 0
         while i<left_len and j<right_len:
             if left_list[i]<right_list[j]:
                 L[k] = left_list[i]
                 i += 1
-            elif right_list[j]<left_list[i]:
+            else:
                 L[k] = right_list[j]
                 j += 1
             k += 1
@@ -30,10 +31,9 @@ def merge_sort(L):
             L[k] = right_list[j]
             j += 1
             k += 1
-
     return L
 
 if __name__ == "__main__":
-    L = [5, 4, 5, 2, 2, 5, 4, 2, 5]
+    L = [5, 1, 3, 2, 4,53,23,4,223,4,5]
     result = merge_sort(L)
     print(result)
